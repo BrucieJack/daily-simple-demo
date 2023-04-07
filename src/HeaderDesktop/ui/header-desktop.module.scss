@@ -1,0 +1,97 @@
+// @import "./breakpoints.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+  width: 100%;
+  padding: 39px 48px;
+  transition: padding-top 0.5s, padding-bottom 0.5s;
+  position: fixed;
+  left: 0;
+  &__button {
+    border: none;
+    background-color: transparent;
+    font-family: "PTRootUI";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &_sign-in {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &_sticky {
+    background-color: black;
+    padding: 0px 48px 0px 48px;
+    z-index: 10;
+    top: 0;
+
+    .header__logo {
+      height: 60px;
+      transform: translateY(-11px);
+
+      img {
+        object-position: 0 12px;
+        transform: scale(0.7);
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      transition: 0.5s;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  &__wrapper {
+    position: sticky;
+    top: 0;
+    height: 158px;
+    z-index: 0;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    gap: 44px;
+
+    .header__link {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0.01em;
+      color: white;
+      transition: opacity 0.3s ease;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}

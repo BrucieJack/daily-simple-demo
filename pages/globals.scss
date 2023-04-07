@@ -1,0 +1,33 @@
+@import "./reset.scss";
+@import "./colors.scss";
+@import "./breakpoints.scss";
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+html {
+  scroll-padding-top: 60px;
+}
+
+body {
+  background: $black;
+  color: $white;
+  overflow-x: hidden;
+}
+
+@media (max-width: $laptop) {
+  html {
+    scroll-padding-top: 92px;
+  }
+}
